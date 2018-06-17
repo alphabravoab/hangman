@@ -19,7 +19,8 @@ class Hangmanboard extends React.PureComponent {
       <h1> Welcome to Hangman </h1>
       { console.log(word) }
       <div className="birdIsTheWord">
-          { game.showGuess(word, "GUESS_LETTER")}
+          {(!this.props.guesses) && game.showGuess(word, '1')}
+          {(this.props.guesses)&& game.showGuess(word, this.props.guesses) }
 
 
         </div>
