@@ -1,0 +1,19 @@
+ul.Lettering{
+  width: 80%;
+  background-color: black;
+  float: center;
+  margin:auto;
+  display:flex;
+  flex-wrap:wrap;
+
+}
+li.Lettering{
+  list-style-type: none;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  margin: 10px;
+  align-self: center;
+  border: 4px solid grey;
+}
