@@ -12,37 +12,30 @@ const alphabet = ["a", "b", "c", "d", "e", "f", "g",
 "s", "t", "u", "v", "w", "x", "y", "z"]
 
 class Hangmanboard extends React.PureComponent {
-
-
   render() {
-    return(<div>
-      <h1> Welcome to Hangman </h1>
-      { console.log(word) }
-      <div className="birdIsTheWord">
-          {(!this.props.guesses) && game.showGuess(word, '1')}
-          {(this.props.guesses)&& game.showGuess(word, this.props.guesses) }
-
-
-        </div>
-
-        <ul className= "Lettering">
-
-          {alphabet.map(letter=> <Letters key= { letter } letter={ letter } onClick= {()=> this.props.makeAGuess( {letter})} /> )}
-
-         </ul>
-
+    return(
+      <div>
+          <h1> Welcome to Hangman </h1>
+              { console.log(word) }
+          <div className="birdIsTheWord">
+              {(!this.props.guesses) && game.showGuess(word, '1')}
+              {(this.props.guesses) && game.showGuess(word, this.props.guesses) }
+          </div>
+            <ul className= "Lettering">
+              {alphabet.map(letter=> <Letters key= { letter }
+                                      letter={ letter }
+                                      onClick= {()=> this.props.makeAGuess( {letter})} /> )}
+            </ul>
       </div>
 )  }
 
 }
 const mapStateToProps = (state) => {
-
   return {
-    hangmanboard: state.hangmanboard
+    guesses: state.guesses
   }
 }
 function mapDispatchToProps (dispatch) {
   return bindActionCreators({makeAGuess:makeAGuess}, dispatch)
 }
-
 export default connect(mapStateToProps, mapDispatchToProps)(Hangmanboard)

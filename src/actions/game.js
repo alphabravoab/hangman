@@ -9,10 +9,10 @@ export const makeAGuess = guess => {
   }
 }
 
-export const setWord = WORD => {
-  console.log(WORD)
+export const setWord = setWord => {
+  console.log(setWord)
   return {
     type: SET_WORD,
-    payload: WORD
+    payload: setWord
   }
 }
