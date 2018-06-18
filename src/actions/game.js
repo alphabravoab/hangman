@@ -5,7 +5,7 @@ export const makeAGuess = guess => {
   console.log(guess)
   return {
     type: GUESS_LETTER,
-    payload: guess
+    payload: guess.letter
   }
 }
 

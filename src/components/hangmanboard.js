@@ -32,7 +32,7 @@ class Hangmanboard extends React.PureComponent {
 }
 const mapStateToProps = (state) => {
   return {
-    guesses: state.guesses
+    guesses: state.game
   }
 }
 function mapDispatchToProps (dispatch) {
