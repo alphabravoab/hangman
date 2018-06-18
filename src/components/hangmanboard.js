@@ -17,9 +17,9 @@ class Hangmanboard extends React.PureComponent {
       <div>
           <h1> Welcome to Hangman </h1>
               { console.log(word) }
+                { game.wrongGuessCount(word, this.props.guesses ) }
           <div className="birdIsTheWord">
-              {(!this.props.guesses) && game.showGuess(word, '1')}
-              {(this.props.guesses) && game.showGuess(word, this.props.guesses) }
+              { game.showGuess(word, this.props.guesses) }
           </div>
             <ul className= "Lettering">
               {alphabet.map(letter=> <Letters key= { letter }
