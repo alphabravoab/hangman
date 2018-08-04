@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { connect } from 'react-redux'
-import { makeAGuess } from '../actions/game'
 import './Letters.css'
 
 
@@ -15,9 +14,5 @@ function Letters(props) {
     </li>
 )}
 
-const mapStateToProps = state => {
-  return {
-    guesses: state.game,
-  }
-}
-export default connect(mapStateToProps, { makeAGuess })(Letters)
+
+export default connect()(Letters)
