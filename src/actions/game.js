@@ -1,5 +1,7 @@
 export const GUESS_LETTER = 'GUESS_LETTER'
 export const SET_WORD = 'SET_WORD'
+export const RESTART_GAME = 'RESTART_GAME'
+
 
 export const makeAGuess = guess => {
   return {
@@ -8,10 +10,9 @@ export const makeAGuess = guess => {
   }
 }
 
-export const setWord = setWord => {
-  console.log(setWord)
+export const restartGame = nada => {
   return {
-    type: SET_WORD,
-    payload: setWord
+    type: RESTART_GAME,
+    payload: nada
   }
 }

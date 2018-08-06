@@ -13,13 +13,13 @@ class GuessCount extends React.PureComponent {
     render() {
   return (
     <div>
-        {this.props.guesses===0 && <div><img src={Image0} /> </div> }
-        {this.props.guesses===1 && <div><img src={Image1} /> </div> }
-        {this.props.guesses===2 && <div><img src={Image2} /> </div> }
-        {this.props.guesses===3 && <div><img src={Image3} /> </div> }
-        {this.props.guesses===4 && <div><img src={Image4} /> </div> }
-        {this.props.guesses===5 && <div><img src={Image5} /> </div> }
-        {this.props.guesses===6 && <div><img src={Image6} /> </div> }
+        {this.props.guesses===0 && <div><img className="hanged" src={Image0} alt="guess 0" /> </div> }
+        {this.props.guesses===1 && <div><img className="hanged" src={Image1} alt="guess 1"/> </div> }
+        {this.props.guesses===2 && <div><img className="hanged" src={Image2} alt="guess 2"/> </div> }
+        {this.props.guesses===3 && <div><img className="hanged" src={Image3} alt="guess 3"/> </div> }
+        {this.props.guesses===4 && <div><img className="hanged" src={Image4} alt="guess 4"/> </div> }
+        {this.props.guesses===5 && <div><img className="hanged" src={Image5} alt="guess 5"/> </div> }
+        {this.props.guesses===6 && <div><img className="hanged" src={Image6} alt="guess 6"/> </div> }
         You have guessed wrong:  {this.props.guesses }</div>
 )}
 }
