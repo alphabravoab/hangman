@@ -2,13 +2,8 @@ import * as React from 'react'
 import { connect } from 'react-redux'
 import * as game from '../game'
 import Keyboard from './Keyboard'
-import GuessCount from './GuessCount'
-
 import { makeAGuess, restartGame } from '../actions/game'
 import './WhatIsTheWord.css'
-
-
-
 
 class DisplayWord extends React.PureComponent {
   render() {

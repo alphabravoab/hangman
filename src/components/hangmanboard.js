@@ -17,7 +17,7 @@ class Hangmanboard extends React.PureComponent {
     this.props.restartGame("word")
   }
   render() {
-    const guesses= game.wrongGuessCount(word, this.props.guesses )
+     const guesses = game.wrongGuessCount(word, this.props.guesses )
     console.log("incase you want to cheat ",word)
     return(
       <div>
