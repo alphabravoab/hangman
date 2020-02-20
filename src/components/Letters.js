@@ -1,18 +1,29 @@
-import * as React from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux';
+import { makeAGuess } from '../actions/game'
 import './Letters.css'
 
-
-
-function Letters(props) {
+const Letters = ({key, letter, makeAGuess}) => {
+  const onClick = () => {
+    makeAGuess(letter)
+  }
   return (
-    <li key = { props.letter }
-        onClick= {props.onClick}
+    <li key = {key}
+        onClick= {onClick}
         className="Lettering"
-        letter={ props.letter } >
-      { props.letter }
+        letter={letter} >
+      {letter}
     </li>
 )}
 
 
-export default connect()(Letters)
+const mapStateToProps = () => {
+  return {}
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({makeAGuess:makeAGuess}, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Letters)

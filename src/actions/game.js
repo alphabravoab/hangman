@@ -6,13 +6,12 @@ export const RESTART_GAME = 'RESTART_GAME'
 export const makeAGuess = guess => {
   return {
     type: GUESS_LETTER,
-    payload: guess.letter
+    payload: guess
   }
 }
 
-export const restartGame = nada => {
+export const restartGame = () => {
   return {
-    type: RESTART_GAME,
-    payload: nada
+    type: RESTART_GAME
   }
 }
